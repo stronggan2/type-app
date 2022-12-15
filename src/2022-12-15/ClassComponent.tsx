@@ -1,14 +1,9 @@
 import React from "react";
 
-const App = () => {
-  interface PersonInterface {
+const ClassComponent = () => {
+  class Person {
     name: string;
-    age: number;
-  }
-
-  class Person implements PersonInterface {
-    name: string;
-    age: number;
+    age: number; 
 
     constructor(name: string, age: number) {
       this.name = name;
@@ -22,4 +17,4 @@ const App = () => {
   return <div></div>;
 };
 
-export default App;
+export default ClassComponent;
