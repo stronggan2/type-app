@@ -1,10 +1,17 @@
+import {useState} from "react";
+import Todos from "./Todo/Todos";
+import Todo from "./Todo/todo";
+import InsertTodo from "./Todo/InsertTodo";
 
-
-import Prac1 from "./2022-12-16/Prac1"
 const App = () => {
+  // const todos = [new Todo("청소하기"), new Todo("공부하기")];
+  const [todos, setTodos]=useState<Todo[]>([]);
+
+  const addTodoHander = (item: string) => {};
   return (
     <div>
-      <Prac1 />
+      <InsertTodo onAddTodo={addTodoHander} />
+      <Todos items={todos} />
     </div>
   );
 };
